@@ -3092,7 +3092,125 @@ textarea.form-control {
     width: 10px;
     margin-right: 0;
 }
+
 .text-muted {
     color: #a4a4a3;
     font-size: 14px;
+}
+
+.custom-checkbox-2 {
+    border: 1px solid #8d17f7;
+    border-radius: 50rem;
+    padding: .5rem 1rem;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.custom-checkbox-2:not(:last-child) {
+    margin-right: 10px;
+}
+
+.custom-checkbox-2:hover,
+.custom-checkbox-2:focus,
+.custom-checkbox-2.selected {
+    background: #8d17f7;
+    color: #fff;
+}
+
+.custom-checkbox-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-checkbox {
+    box-shadow: 0 0 0 1px #ddd;
+    padding: 5px 5px 10px;
+    border-radius: 3px;
+    background: #fff;
+    text-align: center;
+    width: 170px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.custom-checkbox:not(:last-child) {
+    margin-right: 30px;
+}
+
+.custom-checkbox .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.custom-checkbox .icon svg {
+    width: 40px;
+}
+
+.custom-checkbox p {
+    margin-bottom: 0;
+    line-height: 1;
+}
+
+.custom-checkbox.green {
+    border-color: #38b929;
+    box-shadow: 0 0 0 1px #38b929;
+}
+
+.green .icon {
+    color: #38b929;
+}
+
+.custom-checkbox.green.selected,
+.custom-checkbox.green:hover {
+    box-shadow: 0 0 0 3px #38b929;
+}
+
+.custom-checkbox.purple {
+    border-color: #880ff5;
+    box-shadow: 0 0 0 1px #880ff5;
+}
+
+.purple .icon {
+    color: #880ff5;
+}
+
+.custom-checkbox.purple.selected,
+.custom-checkbox.purple:hover {
+    box-shadow: 0 0 0 3px #880ff5;
+}
+
+.custom-checkbox.yellow {
+    border-color: #f2a810;
+    box-shadow: 0 0 0 1px #f2a810;
+}
+
+.yellow .icon {
+    color: #f2a810;
+}
+
+.custom-checkbox.yellow.selected,
+.custom-checkbox.yellow:hover {
+    box-shadow: 0 0 0 3px #f2a810;
+}
+
+.custom-checkbox.blue {
+    border-color: #4151ff;
+    box-shadow: 0 0 0 1px #4151ff;
+}
+
+.blue .icon {
+    color: #4151ff;
+}
+
+.custom-checkbox.blue.selected,
+.custom-checkbox.blue:hover {
+    box-shadow: 0 0 0 3px #4151ff;
 }
