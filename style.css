@@ -2954,6 +2954,7 @@ textarea.form-control {
 .form-control {
     color: #000;
     border-color: #9d9d9c;
+    padding: .5rem 1rem;
 }
 
 .browse-file {
@@ -3024,7 +3025,7 @@ textarea.form-control {
 }
 
 .right-sidebar {
-    padding-right: 15px;
+    padding-right: 30px;
     margin: 50px 0;
 }
 
@@ -3124,10 +3125,10 @@ textarea.form-control {
 }
 
 .custom-checkbox {
-    box-shadow: 0 0 0 1px #ddd;
-    padding: 5px 5px 10px;
+    padding: 5px 5px 15px;
     border-radius: 3px;
     background: #fff;
+    border: 1px solid #ddd;
     text-align: center;
     width: 170px;
     cursor: pointer;
@@ -3136,7 +3137,9 @@ textarea.form-control {
     letter-spacing: 1px;
     margin-bottom: 10px;
     transition: 0.3s;
+    box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.1);
 }
+  
 
 .custom-checkbox:not(:last-child) {
     margin-right: 30px;
@@ -3148,6 +3151,7 @@ textarea.form-control {
     display: flex;
     align-items: center;
     margin: 20px auto;
+    transition: 0.3s;
 }
 
 .custom-checkbox .icon svg {
@@ -3161,7 +3165,6 @@ textarea.form-control {
 
 .custom-checkbox.green {
     border-color: #38b929;
-    box-shadow: 0 0 0 1px #38b929;
 }
 
 .green .icon {
@@ -3170,12 +3173,17 @@ textarea.form-control {
 
 .custom-checkbox.green.selected,
 .custom-checkbox.green:hover {
-    box-shadow: 0 0 0 3px #38b929;
+    background: #38b929;
+    color: #fff;
+}
+
+.custom-checkbox.green.selected .icon,
+.custom-checkbox.green:hover .icon {
+    color: #fff;
 }
 
 .custom-checkbox.purple {
     border-color: #880ff5;
-    box-shadow: 0 0 0 1px #880ff5;
 }
 
 .purple .icon {
@@ -3184,12 +3192,17 @@ textarea.form-control {
 
 .custom-checkbox.purple.selected,
 .custom-checkbox.purple:hover {
-    box-shadow: 0 0 0 3px #880ff5;
+    background: #880ff5;
+    color: #fff;
+}
+
+.custom-checkbox.purple.selected .icon,
+.custom-checkbox.purple:hover .icon {
+    color: #fff;
 }
 
 .custom-checkbox.yellow {
     border-color: #f2a810;
-    box-shadow: 0 0 0 1px #f2a810;
 }
 
 .yellow .icon {
@@ -3198,12 +3211,17 @@ textarea.form-control {
 
 .custom-checkbox.yellow.selected,
 .custom-checkbox.yellow:hover {
-    box-shadow: 0 0 0 3px #f2a810;
+    background: #f2a810;
+    color: #fff;
+}
+
+.custom-checkbox.yellow.selected .icon,
+.custom-checkbox.yellow:hover .icon {
+    color: #fff;
 }
 
 .custom-checkbox.blue {
     border-color: #4151ff;
-    box-shadow: 0 0 0 1px #4151ff;
 }
 
 .blue .icon {
@@ -3212,5 +3230,11 @@ textarea.form-control {
 
 .custom-checkbox.blue.selected,
 .custom-checkbox.blue:hover {
-    box-shadow: 0 0 0 3px #4151ff;
+    background: #4151ff;
+    color: #fff;
+}
+
+.custom-checkbox.blue.selected .icon,
+.custom-checkbox.blue:hover .icon {
+    color: #fff;
 }
