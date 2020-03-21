@@ -15,7 +15,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     background: #fff;
-    color: #333333;
+    color: #000;
 }
 
 a:hover {
@@ -26,6 +26,13 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+
+label {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 ::selection {
@@ -72,6 +79,31 @@ ul {
 
 .main {
     overflow-x: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.main.has-checkmark::before {
+    content: "";
+    position: absolute;
+    left: -172px;
+    top: -342px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(img/checkmark-gradient.png) no-repeat;
+}
+
+.main.has-bottom-shape::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-top: 100px solid transparent;
+    border-right: 100px solid #00aff0;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid #00aff0;
 }
 
 .main .container-fluid {
@@ -754,7 +786,7 @@ ul {
     color: #7F00F4;
 }
 
-.main .col-lg-2 {
+.main .left-sidebar {
     background-image: url(img/left.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -2549,16 +2581,6 @@ img {
 
 
 /****** LATEST CSS *******/
-.main .no-gutters>.col-lg-2 {
-    background-image: url(img/img-left-angle.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    position: relative;
-    z-index: 500000000;
-    background-color: #fff;
-    background-size: contain;
-    background-position: 0% 95%;
-}
 
 .votre-table table tr td:first-child span {
     line-height: 23px;
@@ -2808,19 +2830,23 @@ img {
 
 /* Form Steps */
 .steps-container {
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.steps-container.has-3-steps {
+    grid-template-columns: 170px 170px 170px;
 }
 
 .steps-container::before,
 .steps-container::after {
     content: "";
     position: absolute;
-    top: 55px;
+    top: 53px;
     left: 0;
-    width: calc(50% - 170px);
+    width: calc(50% - 192.5px);
     height: 1px;
     background: #3e4aff;
     z-index: -1;
@@ -2876,14 +2902,110 @@ img {
     font-weight: 700;
 }
 
-.steps.active::before,
-.steps.filled::before {
+.steps:not(:first-child).active::before,
+.steps:not(:first-child).filled::before {
     content: "";
     position: absolute;
-    top: 55px;
+    top: 53px;
     left: -50%;
     width: 100%;
     height: 1px;
     background: #3e4aff;
     z-index: -1;
+}
+
+/* Forms */
+.form-row-card {
+    background: #fff;
+    box-shadow: 7.872px 4.363px 35px 0px rgba(45, 55, 64, 0.1);
+    border-radius: 3px;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.form-row-card h5 {
+    margin-bottom: 1.5rem;
+}
+
+input.form-control {
+    border-radius: 50rem;
+}
+.form-control {
+    border-color: #9d9d9c;
+}
+.browse-file {
+    border-width: 2px;
+    border-color: #dadada;
+    border-style: dashed;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7.872px 4.363px 35px 0px rgba(45, 55, 64, 0.1);
+    padding: 30px;
+    width: 50%;
+    text-align: center;
+}
+
+.custom-input-file {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.custom-input-file-label {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 0;
+}
+
+.custom-input-file-label img {
+    margin-bottom: 10px;
+}
+
+.custom-input-file-label p {
+    margin: 0;
+}
+
+.selected-input-file {
+    width: 50%;
+    text-align: center;
+}
+
+.btn-gradient {
+    background-image: linear-gradient(to right,
+            rgb(117, 0, 244) 0%,
+            rgb(83, 27, 255) 46%,
+            rgb(0, 152, 255) 77%,
+            rgb(0, 245, 197) 100%);
+    background-size: 110%;
+    border: 0;
+    color: #fff;
+}
+
+.btn-gradient:hover {
+    color: #fff;
+    background-size: 100%;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem 1.5rem;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.right-sidebar {
+    padding: 0 30px;
+    margin: 50px 0;
+}
+
+.supportive-content p a {
+    color: inherit;
+    text-decoration: underline;
 }
