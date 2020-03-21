@@ -56,13 +56,13 @@
 				<div class="col-lg-12 text-center">
 					<h3>Remplissez les 3 étapes afin <strong>d’activer votre compte</strong></h3>
 					<div class="steps-container has-3-steps">
-						<div class="steps active">
+						<div class="steps filled">
 							<a href="#">
 								<span>1</span>
 								<p>Informations</p>
 							</a>
 						</div>
-						<div class="steps">
+						<div class="steps active">
 							<a href="#">
 								<span>2</span>
 								<p>Descriptions</p>
@@ -84,91 +84,21 @@
 					<form action="#" class="mb-5">
 						<div class="form-row-card">
 							<div class="form-card-header">
-								<h5 class="font-weight-bold">Nom & logo de l’agence</h5>
+								<h5 class="font-weight-bold">Parlez-nous de votre agence</h5>
+								<p><strong>Racontez l’histoire de votre agence</strong>, parlez-nous de votre ADN, vos
+									compétences, vos clients, etc.</p>
 							</div>
 							<div class="form-group">
-								<label for="inputName">Nom de votre agence</label>
-								<input type="text" class="form-control" id="inputName">
-							</div>
-							<div class="form-row">
-								<div class="form-group col-12 custom-input-file-group">
-									<label for="inputFile"><strong>Importer ou faites glisser le logo</strong> de
-										votre agence au format JPG ou PNG.</label>
-									<div class="d-flex align-items-center">
-										<div class="browse-file">
-											<input type="file" class="custom-input-file" id="inputFile">
-											<label for="inputFile" class="custom-input-file-label text-center">
-												<img src="img/img-download.png" alt="" class="img-fluid">
-												<p>
-													<strong>Drag and drop</strong> ou <br>
-													<strong><u>sélectionner</u></strong>
-													vos fichiers
-												</p>
-											</label>
-										</div>
-										<div class="selected-input-file">
-											<img src="img/logo-sagyoo.png" alt="">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Adresse du siège</h5>
-							</div>
-							<div class="form-group">
-								<label for="inputAddress">Adresse</label>
-								<input type="text" class="form-control" id="inputAddress">
-							</div>
-							<div class="form-row">
-								<div class="form-group col-lg-3">
-									<label for="inputPostalCode">Code postal</label>
-									<input type="text" class="form-control" id="inputPostalCode">
-								</div>
-								<div class="form-group col-lg-6">
-									<label for="inputCity">Ville</label>
-									<input type="text" class="form-control" id="inputCity">
-								</div>
-								<div class="form-group col-lg-3">
-									<label for="inputCountry">Pays de l’agence</label>
-									<input type="text" class="form-control" id="inputCountry">
-								</div>
-							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Numéro de TVA et Siret</h5>
-							</div>
-							<div class="form-group">
-								<label for="inputVAT">Votre numéro de TVA</label>
-								<input type="text" class="form-control" id="inputVAT">
-							</div>
-							<div class="form-group">
-								<label for="inputSIRET">Votre numéro D’identification (SIRET)</label>
-								<input type="text" class="form-control" id="inputSIRET">
-							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Informations supplémentaires</h5>
-							</div>
-							<div class="form-group">
-								<label for="inputWebsite">Site web de l’agence</label>
-								<input type="text" class="form-control" id="inputWebsite">
-							</div>
-							<div class="form-group">
-								<label for="inputAge">Chiffre d’affaire de l’agence</label>
-								<input type="text" class="form-control" id="inputAge">
-							</div>
-							<div class="form-row">
-								<div class="form-group col-lg-3">
-									<label for="inputTeamQuantity">Nombre de personne dans l’équipes</label>
-									<input type="text" class="form-control" id="inputTeamQuantity">
-								</div>
+								<label for="inputDescription">Description</label>
+								<textarea class="form-control" id="inputDescription" rows="6"></textarea>
 							</div>
 						</div>
 						<div class="form-row">
+							<div class="col-lg-6">
+								<button type="button"
+									class="btn btn-outline-secondary rounded-pill btn-block">ÉTAPE
+									Précédente</button>
+							</div>
 							<div class="col-lg-6 ml-auto">
 								<button class="btn rounded-pill btn-block btn-gradient" type="button">ÉTAPE
 									SUIVANTE</button>

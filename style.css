@@ -10,6 +10,11 @@
     font-style: normal;
 }
 
+html,
+body {
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Averta-Regular';
     font-size: 16px;
@@ -81,6 +86,7 @@ label {
     overflow-x: hidden;
     position: relative;
     z-index: 1;
+    min-height: 100vh;
 }
 
 .main.has-checkmark::before {
@@ -2923,16 +2929,23 @@ img {
     margin: 30px 0;
 }
 
-.form-row-card h5 {
+.form-card-header {
     margin-bottom: 1.5rem;
 }
 
 input.form-control {
     border-radius: 50rem;
 }
+
+textarea.form-control {
+    border-radius: 1.5rem;
+}
+
 .form-control {
+    color: #000;
     border-color: #9d9d9c;
 }
+
 .browse-file {
     border-width: 2px;
     border-color: #dadada;
@@ -3008,4 +3021,39 @@ input.form-control {
 .supportive-content p a {
     color: inherit;
     text-decoration: underline;
+}
+
+.custom-control.custom-radio {
+    display: flex;
+    align-items: center;
+    border: 1px solid #9d9d9c;
+    border-radius: 50rem;
+    padding: 10px 40px;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+    top: 0;
+}
+
+.table thead th {
+    border: 0;
+    color: #bcc2c5;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.table th, .table td {
+    padding: 1rem;
+    white-space: nowrap;
+}
+.table .name-role {
+    padding-left: 0;
+    font-size: 14px;
+}
+.telephone,
+.super-collaborator-check {
+    font-weight: 700;
+    color: #4150ff;
 }

@@ -56,19 +56,19 @@
 				<div class="col-lg-12 text-center">
 					<h3>Remplissez les 3 étapes afin <strong>d’activer votre compte</strong></h3>
 					<div class="steps-container has-3-steps">
-						<div class="steps active">
+						<div class="steps filled">
 							<a href="#">
 								<span>1</span>
 								<p>Informations</p>
 							</a>
 						</div>
-						<div class="steps">
+						<div class="steps filled">
 							<a href="#">
 								<span>2</span>
 								<p>Descriptions</p>
 							</a>
 						</div>
-						<div class="steps">
+						<div class="steps active">
 							<a href="#">
 								<span>3</span>
 								<p>Contacts</p>
@@ -80,42 +80,29 @@
 
 			<div class="row no-gutters">
 				<div class="col-lg-8 offset-lg-2">
-					<h4>Parlez nous de <strong>vous</strong></h4>
 					<form action="#" class="mb-5">
+						<h4>Parlez nous de <strong>vous</strong></h4>
 						<div class="form-row-card">
 							<div class="form-card-header">
-								<h5 class="font-weight-bold">Nom & logo de l’agence</h5>
-							</div>
-							<div class="form-group">
-								<label for="inputName">Nom de votre agence</label>
-								<input type="text" class="form-control" id="inputName">
+								<h5 class="font-weight-bold">Ajouter vos premiers contact</h5>
+								<p>Les <strong>contacts de l’agence sont vos collaborateurs</strong> qui auront un
+									<strong>accès personnel à Sagyoo</strong> permettant de créer et gérer leurs
+									missions pour le compte de votre agence.
+								</p>
 							</div>
 							<div class="form-row">
-								<div class="form-group col-12 custom-input-file-group">
-									<label for="inputFile"><strong>Importer ou faites glisser le logo</strong> de
-										votre agence au format JPG ou PNG.</label>
-									<div class="d-flex align-items-center">
-										<div class="browse-file">
-											<input type="file" class="custom-input-file" id="inputFile">
-											<label for="inputFile" class="custom-input-file-label text-center">
-												<img src="img/img-download.png" alt="" class="img-fluid">
-												<p>
-													<strong>Drag and drop</strong> ou <br>
-													<strong><u>sélectionner</u></strong>
-													vos fichiers
-												</p>
-											</label>
-										</div>
-										<div class="selected-input-file">
-											<img src="img/logo-sagyoo.png" alt="">
-										</div>
-									</div>
+								<div class="form-group col-lg-4">
+									<label for="inputFirstName">Prénom</label>
+									<input type="text" class="form-control" id="inputFirstName">
 								</div>
-							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Adresse du siège</h5>
+								<div class="form-group col-lg-4">
+									<label for="inputLastName">Nom</label>
+									<input type="text" class="form-control" id="inputLastName">
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="inputDesignation">Fonction (exemple: chef de projet)</label>
+									<input type="text" class="form-control" id="inputDesignation">
+								</div>
 							</div>
 							<div class="form-group">
 								<label for="inputAddress">Adresse</label>
@@ -135,43 +122,96 @@
 									<input type="text" class="form-control" id="inputCountry">
 								</div>
 							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Numéro de TVA et Siret</h5>
+							<div class="form-row">
+								<div class="form-group col-lg-6">
+									<label for="inputEmail">Adresse e-mail</label>
+									<input type="text" class="form-control" id="inputEmail">
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="inputTelephone">Numéro de téléphone</label>
+									<input type="text" class="form-control" id="inputTelephone">
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="inputVAT">Votre numéro de TVA</label>
-								<input type="text" class="form-control" id="inputVAT">
-							</div>
-							<div class="form-group">
-								<label for="inputSIRET">Votre numéro D’identification (SIRET)</label>
-								<input type="text" class="form-control" id="inputSIRET">
-							</div>
-						</div>
-						<div class="form-row-card">
-							<div class="form-card-header">
-								<h5 class="font-weight-bold">Informations supplémentaires</h5>
-							</div>
-							<div class="form-group">
-								<label for="inputWebsite">Site web de l’agence</label>
-								<input type="text" class="form-control" id="inputWebsite">
-							</div>
-							<div class="form-group">
-								<label for="inputAge">Chiffre d’affaire de l’agence</label>
-								<input type="text" class="form-control" id="inputAge">
+							<div class="form-card-header mt-3">
+								<h5 class="font-weight-bold">Super Collaborateur</h5>
+								<p>Le <strong>Super Collaborateur</strong> permet d’accéder à toutes les missions de
+									l’agence</p>
 							</div>
 							<div class="form-row">
-								<div class="form-group col-lg-3">
-									<label for="inputTeamQuantity">Nombre de personne dans l’équipes</label>
-									<input type="text" class="form-control" id="inputTeamQuantity">
+								<div class="form-group col-lg-6">
+									<div class="custom-control custom-radio">
+										<input type="radio" id="superYes" name="superCollaborator"
+											class="custom-control-input">
+										<label class="custom-control-label" for="superYes">Oui, ce sera un Super
+											Collaborateur</label>
+									</div>
 								</div>
+								<div class="form-group col-lg-6">
+									<div class="custom-control custom-radio">
+										<input type="radio" id="superNo" name="superCollaborator"
+											class="custom-control-input">
+										<label class="custom-control-label" for="superNo">Non, ce n‘est pas un Super
+											Collaborateur</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group mt-3">
+								<button class="btn rounded-pill btn-block btn-gradient" type="button">Valider ce
+									contact</button>
+							</div>
+						</div>
+						<h4>Les collaborateurs de <strong>Fruiteo</strong></h4>
+						<div class="form-row-card">
+							<div class="table-responsive">
+								<table class="table">
+									<thead>
+										<tr>
+											<th class="pl-0">Nom et rôle</th>
+											<th>NUméro</th>
+											<th>Super collaborateur</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="name-role">
+												<strong>Martin Macaigne</strong> - Co-fondateur
+											</td>
+											<td class="telephone">06 00 00 00 00</td>
+											<td class="super-collaborator-check">Oui</td>
+										</tr>
+										<tr>
+											<td class="name-role">
+												<strong>Martin Macaigne</strong> - Co-fondateur
+											</td>
+											<td class="telephone">06 00 00 00 00</td>
+											<td class="super-collaborator-check">Non</td>
+										</tr>
+										<tr>
+											<td class="name-role">
+												<strong>Martin Macaigne</strong> - Co-fondateur
+											</td>
+											<td class="telephone">06 00 00 00 00</td>
+											<td class="super-collaborator-check">Oui</td>
+										</tr>
+										<tr>
+											<td class="name-role">
+												<strong>Martin Macaigne</strong> - Co-fondateur
+											</td>
+											<td class="telephone">06 00 00 00 00</td>
+											<td class="super-collaborator-check">Oui</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 						<div class="form-row">
+							<div class="col-lg-6">
+								<button type="button" class="btn btn-outline-secondary rounded-pill btn-block">ÉTAPE
+									Précédente</button>
+							</div>
 							<div class="col-lg-6 ml-auto">
-								<button class="btn rounded-pill btn-block btn-gradient" type="button">ÉTAPE
-									SUIVANTE</button>
+								<button class="btn rounded-pill btn-block btn-gradient" type="button">Valider mon
+									inscription</button>
 							</div>
 						</div>
 					</form>
