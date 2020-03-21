@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<!-- Meta setup -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="">
+	<meta name="decription" content="">
+	<meta name="author" content="Asad Kabir">
+
+	<!-- Title -->
+	<title>Welcome</title>
+
+	<!-- Fav Icon -->
+	<link rel="icon" href="img/fav.png" />
+	<link rel="stylesheet" href="css/circle.css" />
+
+	<!-- Include Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.css" />
+
+	<!-- Include Owl-Carusol -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+	<!-- Main StyleSheet -->
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- Responsive CSS -->
+	<link rel="stylesheet" href="css/responsive.css" />
+
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+
+	<div class="main has-checkmark has-bottom-shape">
+		<div class="container-fluid">
+			<!-- Logo Container -->
+			<div class="row no-gutters my-4">
+				<div class="col-lg-12 text-center">
+					<div class="logo-container">
+						<a href="">
+							<img src="img/logo-sagyoo.png" alt="" class="img-fluid">
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Form Steps -->
+			<div class="row no-gutters">
+				<div class="col-lg-12 text-center">
+					<h3>Remplissez les 3 étapes afin <strong>d’activer votre compte</strong></h3>
+					<div class="steps-container has-4-steps">
+						<div class="steps filled">
+							<a href="#">
+								<span>1</span>
+								<p>Informations</p>
+							</a>
+						</div>
+						<div class="steps filled">
+							<a href="#">
+								<span>2</span>
+								<p>Parcours</p>
+							</a>
+						</div>
+						<div class="steps filled">
+							<a href="#">
+								<span>3</span>
+								<p>Compétences</p>
+							</a>
+						</div>
+						<div class="steps active">
+							<a href="#">
+								<span>4</span>
+								<p>Profil</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row no-gutters">
+				<div class="col-lg-10 offset-lg-2">
+					<div class="row">
+						<div class="col-lg-9">
+							<h4>Parlez nous de <strong>vous</strong></h4>
+							<form action="#" class="mb-5">
+								<div class="form-row-card">
+									<div class="form-card-header">
+										<h5 class="font-weight-bold">Parlez-nous de votre profil</h5>
+										<p>
+											<strong>Parlez-nous de vous, de vos compétences, vos références, etc.</strong>
+											Cela nous permettra de mieux vous connaître et matcher les meilleures missions pour vous
+										</p>
+									</div>
+									<div class="form-group">
+										<label for="inputDescription">Description</label>
+										<textarea class="form-control" id="inputDescription" rows="6"></textarea>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-lg-6">
+										<button type="button"
+											class="btn btn-outline-secondary rounded-pill btn-block">ÉTAPE
+											Précédente</button>
+									</div>
+									<div class="col-lg-6 ml-auto">
+										<button class="btn rounded-pill btn-block btn-gradient" type="button">ÉTAPE
+											SUIVANTE</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-lg-3">
+							<div class="right-sidebar">
+								<div class="supportive-content">
+									<p><strong>Vous avez besoin d’aide ou de conseils pour finaliser votre inscription
+											?</strong></p>
+									<p>Nous sommes disponibles par téléphone au <strong>01 00 00 00 00.</strong></p>
+									<p><strong>Vous pouvez également consulter notre FAQ en cliquant <a
+												href="#">ici</a>.</strong></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Main jQuery -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Bootstrap Propper jQuery -->
+	<script src="js/popper.js"></script>
+
+	<!-- Bootstrap jQuery -->
+	<script src="js/bootstrap.js"></script>
+
+	<!-- Fontawesome Script -->
+	<script src="https://kit.fontawesome.com/7749c9f08a.js"></script>
+
+	<script src="js/pie-chart.js" type="text/javascript"></script>
+
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- Custom jQuery -->
+	<script src="js/scripts.js"></script>
+
+	<!-- Scroll-Top button -->
+	<a href="#" class="scrolltotop"><i class="fas fa-angle-up"></i></a>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#demo-pie-1').pieChart({
+				barColor: '#fff',
+				trackColor: '#b566f9',
+				lineCap: 'round',
+				size: 60,
+				lineWidth: 5,
+				/*rotate: 90,*/
+				onStep: function (from, to, percent) {
+					$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+				}
+			});
+
+		});
+	</script>
+
+
+</body>
+
+</html>
