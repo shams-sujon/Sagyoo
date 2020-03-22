@@ -2950,6 +2950,7 @@ textarea.form-control {
     color: #000;
     border-color: #9d9d9c;
     padding: .5rem 1rem;
+    height: auto;
 }
 
 .browse-file {
@@ -3018,7 +3019,10 @@ textarea.form-control {
     line-height: 1;
     transition: 0.3s;
 }
-
+.btn-sm {
+    font-size: 12px;
+    padding: .8rem 1.5rem;
+}
 .right-sidebar {
     padding-right: 30px;
     margin: 50px 0;
@@ -3115,29 +3119,23 @@ textarea.form-control {
 }
 
 .custom-checkbox-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 }
 
 .custom-checkbox {
-    padding: 5px 5px 15px;
+    padding: 30px 10px;
     border-radius: 3px;
     background: #fff;
     border: 1px solid #ddd;
     text-align: center;
-    width: 170px;
     cursor: pointer;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    margin-bottom: 10px;
     transition: 0.3s;
     box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.1);
-}
-
-
-.custom-checkbox:not(:last-child) {
-    margin-right: 30px;
 }
 
 .custom-checkbox .icon {
@@ -3145,8 +3143,9 @@ textarea.form-control {
     height: 40px;
     display: flex;
     align-items: center;
-    margin: 20px auto;
+    margin: 0 auto;
     transition: 0.3s;
+    margin-bottom: 30px;
 }
 
 .custom-checkbox .icon svg {
@@ -3238,6 +3237,7 @@ textarea.form-control {
 .clients-container {
     position: relative;
 }
+
 .clients-container::after {
     content: "";
     position: absolute;
@@ -3248,12 +3248,12 @@ textarea.form-control {
     height: 50px;
     background: linear-gradient(to top, #fff, transparent);
 }
+
 .clients-container .scroll-div {
     max-height: 600px;
     overflow-y: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-bottom: 50px;
 }
 
 .section-header {
@@ -3297,10 +3297,11 @@ textarea.form-control {
 
 .clients-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 30px;
     justify-content: space-between;
     margin-top: 30px;
+    padding-bottom: 50px;
 }
 
 .client {
@@ -3342,10 +3343,10 @@ textarea.form-control {
 }
 
 .cta-card {
-    background: #2db41e;
-    border-radius: 4px;
+    border-radius: 3px;
     text-align: center;
     padding: 30px;
+    box-shadow: 7.872px 4.363px 35px 0px rgba(45, 55, 64, 0.1);
 }
 
 .cta-card.green {
@@ -3353,18 +3354,37 @@ textarea.form-control {
     color: #fff;
 }
 
+.cta-card.white {
+    background: #fff;
+}
+
 .btn-white {
     background: #fff;
     color: #000;
 }
 
-.cta-card p {
-    font-size: 18px;
+.btn-blue {
+    background: #452dff;
+    color: #fff;
 }
 
-.cta-card .btn {
-    font-size: 12px;
-    letter-spacing: 2px;
+.btn-blue:hover {
+    background: #3d27df;
+    color: #fff;
+}
+
+.btn-blue-outline {
+    border-color: #452dff;
+    color: #452dff;
+}
+
+.btn-blue-outline:hover {
+    background: #3d27df;
+    color: #fff;
+}
+
+.cta-card p {
+    font-size: 18px;
 }
 
 .cta-card.green .btn {
@@ -3373,4 +3393,270 @@ textarea.form-control {
 
 .cta-card .btn:hover {
     box-shadow: 1.939px 3.498px 8px 0px rgba(3, 13, 127, 0.2);
+}
+
+.input-date,
+.input-time {
+    position: relative;
+}
+
+.input-date .form-control,
+.input-time .form-control {
+    padding-right: 40px;
+}
+
+.input-date .icon,
+.input-time .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    z-index: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    color: #522aff;
+}
+
+.form-information p {
+    margin-bottom: 5px;
+}
+
+.form-information ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.pricing-card-container {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: space-between;
+}
+
+.pricing-card {
+    border: 1px solid#a4a4a3;
+    border-radius: 3px;
+    background: #fff;
+    box-shadow: 2.407px 3.195px 11px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing-card .icon {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.pricing-card .icon svg {
+    margin: 2px;
+}
+
+.pricing-card .pricing-type {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.pricing-card .pricing-rate {
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    margin-bottom: 0;
+}
+
+.pricing-card.classic {
+    border-color: #a4a4a3;
+}
+
+.pricing-card.intermediate {
+    border-color: #4f38fe;
+}
+
+.pricing-card.expert {
+    border-color: #2db41e;
+}
+
+.pricing-card.classic:hover,
+.pricing-card.classic.selected {
+    background: #a4a4a3;
+    color: #fff;
+}
+
+.pricing-card.intermediate:hover,
+.pricing-card.intermediate.selected {
+    background: #4f38fe;
+    color: #fff;
+}
+
+.pricing-card.expert:hover,
+.pricing-card.expert.selected {
+    background: #2db41e;
+    color: #fff;
+}
+
+.pricing-card.classic .icon {
+    color: #a4a4a3;
+}
+
+.pricing-card.intermediate .icon {
+    color: #4f38fe;
+}
+
+.pricing-card.expert .icon {
+    color: #2db41e;
+}
+
+
+.pricing-card.classic:hover .icon,
+.pricing-card.classic.selected .icon {
+    color: #fff;
+}
+
+.pricing-card.intermediate:hover .icon,
+.pricing-card.intermediate.selected .icon {
+    color: #fff;
+}
+
+.pricing-card.expert:hover .icon,
+.pricing-card.expert.selected .icon {
+    color: #fff;
+}
+
+.estimate-values p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a4a4a3;
+}
+
+.input-estimate-hour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-estimate-hour input {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #000;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    width: 150px;
+    -moz-appearance: textfield;
+}
+
+.input-estimate-hour input::-webkit-outer-spin-button,
+.input-estimate-hour input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-estimate-hour .minus,
+.input-estimate-hour .plus {
+    border: 1px solid #a6a6a5;
+    background: #f1f1f1;
+    color: #452dff;
+    border-radius: 50rem;
+    width: 30px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.estimate-cost {
+    background: #452dff;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 20px;
+    display: inline-block;
+    line-height: 1;
+    border-radius: 50rem;
+}
+
+.project-preview-info {
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 7.872px 4.363px 35px 0px rgba(45, 55, 64, 0.1);
+    padding: 0 20px;
+}
+
+.single-info {
+    padding: 15px 0;
+}
+
+.single-info:not(:last-child) {
+    border-bottom: 1px solid #cbcbca;
+}
+
+.single-info p {
+    margin-bottom: 0;
+}
+
+.info-title {
+    color: #452dff;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+button input[type="file"] {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.single-file {
+    display: flex;
+    align-items: center;
+}
+
+.single-file + .single-file {
+    margin-top: 20px;
+}
+
+.single-file .icon {
+    width: 40px;
+    color: #531bff;
+}
+
+.imported-files .file-progress {
+    flex-grow: 1;
+    margin: 0 15px;
+}
+
+.imported-files .file-name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.file-progress .progress {
+    height: 5px;
+    border-radius: 50rem;
+}
+.file-progress .progress-bar {
+    background-image: -moz-linear-gradient( 0deg, rgb(117,0,244) 0%, rgb(83,27,255) 46%, rgb(0,152,255) 77%, rgb(0,245,197) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(117,0,244) 0%, rgb(83,27,255) 46%, rgb(0,152,255) 77%, rgb(0,245,197) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(117,0,244) 0%, rgb(83,27,255) 46%, rgb(0,152,255) 77%, rgb(0,245,197) 100%);
 }
